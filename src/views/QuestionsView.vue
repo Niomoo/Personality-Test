@@ -1,18 +1,20 @@
 <template>
-  <div>
-    <h2>測測你是哪種食物？</h2>
-    <div v-if="!allQuestionsAnswered">
-      <question-component 
-        :key="currentQuestionIndex"
-        :question="currentQuestion"
-        @answer="saveAnswer($event)"
-      />
-    </div>
-    <result-component
-      v-if="allQuestionsAnswered"
-      :personalityType="calculatePersonalityType"
-      @retake="resetTest"
-    />
+  <div class="flex flex-col items-center justify-center h-svh bg-gray-100">
+    <div class="w-full max-w-md min-w-md p-6 m-4 space-y-8 bg-white shadow-md rounded-lg">
+      <h1 class="text-3xl font-bold text-center mb-12">測測你是哪種食物？</h1>
+        <div v-if="!allQuestionsAnswered">
+          <question-component 
+            :key="currentQuestionIndex"
+            :question="currentQuestion"
+            @answer="saveAnswer($event)"
+          />
+        </div>
+        <result-component
+          v-else
+          :personalityType="calculatePersonalityType"
+          @retake="resetTest"
+        />
+      </div>  
   </div>
 </template>
 
@@ -28,7 +30,7 @@ export default {
     return {
       questions: [
         {
-          content: 'Q1: 你和朋友去旅行，來到一個陌生的城市，你們想找一家餐廳吃晚餐，你會選擇',
+          content: '你和朋友去旅行，來到一個陌生的城市，你們想找一家餐廳吃晚餐，你會選擇',
           options: [
             {
               text: '嘗試當地最有名的特色小吃',
@@ -43,7 +45,7 @@ export default {
           ]
         },
         {
-          content: 'Q2: 週末下午，你想做頓豐盛的午餐，你會選擇',
+          content: '週末下午，你想做頓豐盛的午餐，你會選擇',
           options: [
             {
               text: '自己動作手做飯，享受烹飪的過程，並嘗試新的菜單',
@@ -58,7 +60,7 @@ export default {
           ]
         },
         {
-          content: 'Q3: 你正在參加一個重要的會議，需要保持清醒和專注，你更傾向',
+          content: '你正在參加一個重要的會議，需要保持清醒和專注，你更傾向',
           options: [
             {
               text: '一份營養均衡的沙拉，提供你所需的能量和營養',
@@ -73,7 +75,7 @@ export default {
           ]
         },
         {
-          content: 'Q4: 情人節想找間餐廳約會，你會選擇',
+          content: '情人節想找間餐廳約會，你會選擇',
           options: [
             {
               text: '環境優雅、餐點精緻的法式餐廳，享受浪漫的氛圍',
@@ -88,7 +90,7 @@ export default {
           ]
         },
         {
-          content: 'Q5: 和家人一起慶祝節日，想準備一道菜餚，你會選擇',
+          content: '和家人一起慶祝節日，想準備一道菜餚，你會選擇',
           options: [
             {
               text: '媽媽拿手的紅燒肉，因為是節日必備的料理',
@@ -103,7 +105,7 @@ export default {
           ]
         },
         {
-          content: 'Q6: 準備在家人面前大展身手的你正苦惱如何製作這道菜餚，你會',
+          content: '準備在家人面前大展身手的你正苦惱如何製作這道菜餚，你會',
           options: [
             {
               text: '仔細閱讀食譜，了解每一步的烹飪步驟',
@@ -118,7 +120,7 @@ export default {
           ]
         },
         {
-          content: 'Q7: 和很久沒見面的朋友一起去野餐，你更傾向',
+          content: '和很久沒見面的朋友一起去野餐，你更傾向',
           options: [
             {
               text: '和朋友一起分享美食，談天說地',
@@ -133,7 +135,7 @@ export default {
           ]
         },
         {
-          content: 'Q8: 你正在學習新的烹飪技巧，此時會選擇',
+          content: '你正在學習新的烹飪技巧，此時會選擇',
           options: [
             {
               text: '嘗試精緻的甜點',
@@ -148,7 +150,7 @@ export default {
           ]
         },
         {
-          content: 'Q9: 在旅行途中發現了新的食材，你更傾向',
+          content: '在旅行途中發現了新的食材，你更傾向',
           options: [
             {
               text: '深入了解食材的特性',
@@ -163,7 +165,7 @@ export default {
           ]
         },
         {
-          content: 'Q10: 發現最近有點胖了...想保持身材的你會選擇',
+          content: '發現最近有點胖了...想保持身材的你會選擇',
           options: [
             {
               text: '清淡健康的蔬菜沙拉，幫助控制卡路里',
@@ -178,7 +180,7 @@ export default {
           ]
         },
         {
-          content: 'Q11: 準備規劃一場異國旅行，你會傾向',
+          content: '準備規劃一場異國旅行，你會傾向',
           options: [
             {
               text: '尋找當地特色美食',
@@ -193,7 +195,7 @@ export default {
           ]
         },
         {
-          content: 'Q12: 臨時決定晚餐的去處，你會',
+          content: '臨時決定晚餐的去處，你會',
           options: [
             {
               text: '立刻上網查資料，做好附近餐廳的比較',
