@@ -1,17 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import QuestionPage from '@/views/QuestionPage.vue'
-import ResultsPage from '@/views/ResultsPage.vue'
+import QuestionsView from '@/views/QuestionsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: QuestionPage
-    },
-    {
-      path: 'results',
-      component: ResultsPage
+      name: 'questions',
+      component: QuestionsView
     },
     // {
     //   path: '/about',
