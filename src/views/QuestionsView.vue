@@ -226,84 +226,84 @@ export default {
       },
       personalityType: {
         "ESTJ": {
-          name: "烤雞",
-          context: "像烤雞一樣傳統經典，實在可靠。注重事實和效率，是踏實負責的領導者。",
-          secret: "表面嚴肅，私底下也愛偷吃零食，放鬆一下"
+          name: 'personality_1',
+          context: 'personality_1_context',
+          secret: "personality_1_secret"
         },
         "ESFJ": {
-          name: "家常便當",
-          context: "溫馨貼心如同媽媽的家常便當，注重人情世故，是出色的照顧者。",
-          secret: "雖然人見人愛，但私底下也會偶爾任性妥協。"
+          name: 'personality_2',
+          context: 'personality_2_context',
+          secret: "personality_2_secret"
         },
         "ENTJ": {
-          name: "麻辣火鍋",
-          context: "像火鍋那樣熱情洋溢，雄心壯志，是天生的領袖和決策者。",
-          secret: "外表理性冷靜，但在某些小事上也會較計較。"
+          name: 'personality_3',
+          context: 'personality_3_context',
+          secret: "personality_3_secret"
         },
         "ENFJ": {
-          name: "主廚新創意料理",
-          context: "像大廚創意料理般富想像力，熱心善於溝通，是出色的教練和引路人。",
-          secret: "雖然看似總是友善，但有自己的原則和底線。"
+          name: 'personality_4',
+          context: 'personality_4_context',
+          secret: "personality_4_secret"
         },
         "ISTP": {
-          name: "生魚片",
-          context: "簡單樸素如生魚片，喜歡用實在的解決問題，是冷靜沉著的實幹家。",
-          secret: "表面冷淡，私底下也會為美食而動容。"
+          name: 'personality_5',
+          context: 'personality_5_context',
+          secret: "personality_5_secret"
         },
         "ISFP": {
-          name: "手工 Pizza",
-          context: "像手工 Pizza 般用心製作，注重體驗感受，是富有同理心的藝術家。",
-          secret: "外表柔順隨性，但也會為重要事物而堅持。"
+          name: 'personality_6',
+          context: 'personality_6_context',
+          secret: "personality_6_secret"
         },
         "INTP": {
-          name: "藍帶素食",
-          context: "如同創新的藍帶素食，富有獨立思考的理性，是熱衷於探索的學者。",
-          secret: "看似高深莫測，其實私底下也會做些小錯誤。"
+          name: 'personality_7',
+          context: 'personality_7_context',
+          secret: "personality_7_secret"
         },
         "INFP": {
-          name: "手工甜點",
-          context: "如同賞心悅目的手工甜點，富有同情心和想像力，是充滿理想主義的調停者。",
-          secret: "外表柔弱多情，但內心也有堅韌不拔的一面。"
+          name: 'personality_8',
+          context: 'personality_8_context',
+          secret: "personality_8_secret"
         },
         "ESTP": {
-          name: "美式漢堡餐",
-          context: "像熱情洋溢的漢堡餐般活潑熱鬧，是善於體驗刺激的遊戲玩家。",
-          secret: "看似瀟灑不羈，私底下也會為人著想。"
+          name: 'personality_9',
+          context: 'personality_9_context',
+          secret: "personality_9_secret"
         },
         "ESFP": {
-          name: "七彩鬆餅",
-          context: "如同繽紛的七彩鬆餅般活潑奔放，是熱愛生活和歡笑的娛樂家。",
-          secret: "外表熱情如火，但也需要適當的獨處時間。"
+          name: 'personality_10',
+          context: 'personality_10_context',
+          secret: "personality_10_secret"
         },
         "ENTP": {
-          name: "東南亞異國風味餐",
-          context: "像東南亞風味餐般新鮮獨特，善於創新，是充滿幽默和想像力的改革家。",
-          secret: "口無遺餘善於辯論，私下也會對某些事物三思而行。"
+          name: 'personality_11',
+          context: 'personality_11_context',
+          secret: "personality_11_secret"
         },
         "ENFP": {
-          name: "自助百匯餐",
-          context: "如同豐富的自助百匯餐般熱情包羅萬象，是富有同理心的大使。",
-          secret: "看似不拘小節，但也會為理想而堅持己見。"
+          name: 'personality_12',
+          context: 'personality_12_context',
+          secret: "personality_12_secret"
         },
         "ISTJ": {
-          name: "家鄉鹹湯圓",
-          context: "如飽含家鄉風味的鹹湯圓般值得信賴，是實事求是的管家。",
-          secret: "外表嚴肅認真，私下也會放鬆一下。"
+          name: 'personality_13',
+          context: 'personality_13_context',
+          secret: "personality_13_secret"
         },
         "ISFJ": {
-          name: "媽媽手路菜",
-          context: "溫暖如同媽媽的手路菜，是體貼入微的工作者和守護者。",
-          secret: "雖然謙遜內向，但也渴望被人理解和認同。"
+          name: 'personality_14',
+          context: 'personality_14_context',
+          secret: "personality_14_secret"
         },
         "INTJ": {
-          name: "創新素食料理",
-          context: "像創新素食餐般獨樹一幟，遠見卓識，是有獨到理念的策士。",
-          secret: "表面理性冷靜，私下也會為特定興趣而著迷。"
+          name: 'personality_15',
+          context: 'personality_15_context',
+          secret: "personality_15_secret"
         },
         "INFJ": {
-          name: "酸辣手工湯麵",
-          context: "如酸辣手工湯麵般獨特複雜，有獨到見解，是富有洞察力的諮詢顧問。",
-          secret: "雖然神秘高深，但也需要被人理解和包容。"
+          name: 'personality_16',
+          context: 'personality_16_context',
+          secret: "personality_16_secret"
         }
       },
       currentQuestionIndex: 0,

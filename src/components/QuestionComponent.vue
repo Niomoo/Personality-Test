@@ -1,11 +1,11 @@
 <template>
     <div class="flex flex-col items-center mt-8">
         <h2 class="text-2xl mb-8">{{ $t(question.content) }}</h2>
-        <div class="flex justify-center gap-4">
+        <div class="flex flex-col justify-center gap-4">
             <button 
                 v-for="option in question.options" 
                 :key="option"
-                class="bg-green-500 hover:bg-green-600 text-xl text-white py-2 px-4 rounded w-1/2"
+                class="bg-green-500 hover:bg-green-600 text-xl text-white p-4 rounded text-left w-full"
                 @click="$emit('answer', option)">{{ $t(option.text) }}
             </button>
         </div>

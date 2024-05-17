@@ -1,8 +1,8 @@
 <template>
     <div class="my-6">
-        <h2 class="text-2xl mb-4">你是 {{ personalityType.name }}</h2>
-        <p class="text-xl mb-4">{{ personalityType.context }}</p>
-        <p class="text-lg">不為人知的小秘密：{{ personalityType.secret }}</p>
+        <h2 class="text-2xl mb-4">你是 {{ $t(personalityType.name) }}</h2>
+        <p class="text-xl mb-4">{{ $t(personalityType.context) }}</p>
+        <p class="text-lg">不為人知的小秘密：{{ $t(personalityType.secret) }}</p>
     </div>
     <div class="flex justify-center gap-4">
         <button 

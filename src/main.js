@@ -13,7 +13,7 @@ import jaLocale from './locales/ja.json'
 import koLocale from './locales/ko.json'
 
 const i18n = createI18n({
-  locale: 'en',
+  locale: 'zh',
   messages: {
     zh: zhLocale,
     en: enLocale,
