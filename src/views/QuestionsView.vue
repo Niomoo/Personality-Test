@@ -30,185 +30,185 @@ export default {
     return {
       questions: [
         {
-          content: '你和朋友去旅行，來到一個陌生的城市，你們想找一家餐廳吃晚餐，你會選擇',
+          content: 'question1',
           options: [
             {
-              text: '嘗試當地最有名的特色小吃',
-              category: 0,
-              type: 1       // E
-            },
-            {
-              text: '選擇一間熟悉了國際連鎖餐廳',
-              category: 0,
-              type: -1      // I
-            }
-          ]
-        },
-        {
-          content: '週末下午，你想做頓豐盛的午餐，你會選擇',
-          options: [
-            {
-              text: '自己動作手做飯，享受烹飪的過程，並嘗試新的菜單',
-              category: 1,
-              type: 1       // S 
-            },
-            {
-              text: '叫外賣或去餐廳吃飯，因為你不想花時間做飯',
-              category: 1,
-              type: -1      // N
-            }
-          ]
-        },
-        {
-          content: '你正在參加一個重要的會議，需要保持清醒和專注，你更傾向',
-          options: [
-            {
-              text: '一份營養均衡的沙拉，提供你所需的能量和營養',
-              category: 2,
-              type: 1       // T
-            },
-            {
-              text: '一份美味的漢堡，讓你感到滿足和快樂',
-              category: 2,
-              type: -1      // F
-            }
-          ]
-        },
-        {
-          content: '情人節想找間餐廳約會，你會選擇',
-          options: [
-            {
-              text: '環境優雅、餐點精緻的法式餐廳，享受浪漫的氛圍',
+              text: 'question_1_0',
               category: 3,
-              type: 1       // J
+              type: 1       
             },
             {
-              text: '溫馨舒適、餐點簡單的家庭餐廳，享受輕鬆的氛圍',
+              text: 'question_1_1',
               category: 3,
-              type: -1      // P
+              type: -1      
             }
           ]
         },
         {
-          content: '和家人一起慶祝節日，想準備一道菜餚，你會選擇',
+          content: 'question2',
           options: [
             {
-              text: '媽媽拿手的紅燒肉，因為是節日必備的料理',
-              category: 1,
-              type: 1       // S
-            },
-            {
-              text: '最近網路上很紅的創意料理，因為你想嘗試新的烹飪方法',
-              category: 1,
-              type: -1      // N
-            }
-          ]
-        },
-        {
-          content: '準備在家人面前大展身手的你正苦惱如何製作這道菜餚，你會',
-          options: [
-            {
-              text: '仔細閱讀食譜，了解每一步的烹飪步驟',
+              text: 'question_2_0',
               category: 2,
-              type: 1       // T
+              type: 1       
             },
             {
-              text: '觀看美食節目，學習廚師的烹飪技巧',
+              text: 'question_2_1',
               category: 2,
-              type: -1      // F
+              type: -1      
             }
           ]
         },
         {
-          content: '和很久沒見面的朋友一起去野餐，你更傾向',
+          content: 'question3',
           options: [
             {
-              text: '和朋友一起分享美食，談天說地',
-              category: 0,
-              type: 1       // E
-            },
-            {
-              text: '帶一份自己做的料理，與朋友分享你的廚藝',
-              category: 0,
-              type: -1      // I
-            }
-          ]
-        },
-        {
-          content: '你正在學習新的烹飪技巧，此時會選擇',
-          options: [
-            {
-              text: '嘗試精緻的甜點',
+              text: 'question_3_0',
               category: 3,
-              type: 1       // J
+              type: 1       
             },
             {
-              text: '從簡單的菜餚開始',
+              text: 'question_3_1',
               category: 3,
-              type: -1      // P
+              type: -1      
             }
           ]
         },
         {
-          content: '在旅行途中發現了新的食材，你更傾向',
+          content: 'question4',
           options: [
             {
-              text: '深入了解食材的特性',
-              category: 2,
-              type: 1       // T
+              text: 'question_4_0',
+              category: 0,
+              type: 1       
             },
             {
-              text: '直接嘗試用來做菜',
-              category: 2,
-              type: -1      // F
+              text: 'question_4_1',
+              category: 0,
+              type: -1      
             }
           ]
         },
         {
-          content: '發現最近有點胖了...想保持身材的你會選擇',
+          content: 'question5',
           options: [
             {
-              text: '清淡健康的蔬菜沙拉，幫助控制卡路里',
+              text: 'question_5_0',
               category: 1,
-              type: -1      // N
+              type: 1       
             },
             {
-              text: '營養均衡的便當，提供所需的熱量',
+              text: 'question_5_1',
               category: 1,
-              type: 1       // S
+              type: -1      
             }
           ]
         },
         {
-          content: '準備規劃一場異國旅行，你會傾向',
+          content: 'question6',
           options: [
             {
-              text: '尋找當地特色美食',
-              category: 0,
-              type: 1       // E
+              text: 'question_6_0',
+              category: 2,
+              type: 1       
             },
             {
-              text: '比較在外國的台灣美食',
-              category: 0,
-              type: -1      // I
+              text: 'question_6_1',
+              category: 2,
+              type: -1      
             }
           ]
         },
         {
-          content: '臨時決定晚餐的去處，你會',
+          content: 'question7',
           options: [
             {
-              text: '立刻上網查資料，做好附近餐廳的比較',
-              category: 3,
-              type: 1       // J
+              text: 'question_7_0',
+              category: 0,
+              type: 1       
             },
             {
-              text: '隨性去哪裡就去哪裡，看當下狀況',
-              category: 3,
-              type: -1      // P
+              text: 'question_7_1',
+              category: 0,
+              type: -1      
             }
           ]
-        }
+        },
+        {
+          content: 'question8',
+          options: [
+            {
+              text: 'question_8_0',
+              category: 1,
+              type: -1       
+            },
+            {
+              text: 'question_8_1',
+              category: 1,
+              type: 1      
+            }
+          ]
+        },
+        {
+          content: 'question9',
+          options: [
+            {
+              text: 'question_9_0',
+              category: 2,
+              type: -1       
+            },
+            {
+              text: 'question_9_1',
+              category: 2,
+              type: 1      
+            }
+          ]
+        },
+        {
+          content: 'question10',
+          options: [
+            {
+              text: 'question_10_0',
+              category: 3,
+              type: 1       
+            },
+            {
+              text: 'question_10_1',
+              category: 3,
+              type: -1      
+            }
+          ]
+        },
+        {
+          content: 'question11',
+          options: [
+            {
+              text: 'question_11_0',
+              category: 1,
+              type: -1       
+            },
+            {
+              text: 'question_11_1',
+              category: 1,
+              type: 1      
+            }
+          ]
+        },
+        {
+          content: 'question12',
+          options: [
+            {
+              text: 'question_12_0',
+              category: 0,
+              type: -1       
+            },
+            {
+              text: 'question_12_1',
+              category: 0,
+              type: 1      
+            }
+          ]
+        },
       ],
       userAnswers: {
         0: 0,
