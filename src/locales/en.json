@@ -1,4 +1,5 @@
 {
+  "title": "Discover Your Destined Cuisine",
   "introduction": "As a renowned food bounty hunter, your life's ambition has been to savor the most delectable dishes the world has to offer. One day, you receive a mysterious invitation from the renowned Wang Steakhouse Group. Legends speak of an ancient tome hidden deep within those verdant woods, detailing the perfect foods that resonate with every personality. Retrieving this prized manuscript would unveil the culinary delights that best capture your essence. With anticipation, you venture into the enigmatic wilderness, embarking on a quest to discover the flavors that define you.",
   "question1": "To locate the hidden book, you must traverse a dense forest. In this situation, you would:",
   "options_1_0": "Follow the marked official trail on the map, adhering to the set path.",
@@ -83,5 +84,9 @@
   "personality_15_secret": "Appears rational, but privately obsesses over special interests.",
   "personality_16": "Artisanal Tangy Noodle Soup",
   "personality_16_context": "Intricate like artisanal tangy noodle soup. Insightful, the profound advisor.",
-  "personality_16_secret": "Seems mysterious, but needs to be understood and accepted."
+  "personality_16_secret": "Seems mysterious, but needs to be understood and accepted.",
+  "results": "Your Destined Cuisine Is ",
+  "secret": "A Well-Kept Secret: ",
+  "restart": "Retake",
+  "share": "Share"
 }
