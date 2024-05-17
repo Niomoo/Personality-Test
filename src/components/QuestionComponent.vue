@@ -5,7 +5,7 @@
             <button 
                 v-for="option in question.options" 
                 :key="option"
-                class="bg-green-500 hover:bg-green-600 text-lg text-white p-2 rounded text-left w-full"
+                class="bg-green-500 hover:bg-green-600 text-lg text-white py-2 px-4 rounded text-left w-full"
                 @click="$emit('answer', option)">{{ $t(option.text) }}
             </button>
         </div>
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         question: {

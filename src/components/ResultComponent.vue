@@ -1,6 +1,12 @@
+<script setup>
+function setImg(path) {
+    return new URL('../assets/images' + path, import.meta.url).href
+}
+</script>
 <template>
     <div class="my-6">
         <h2 class="text-2xl mb-4">{{ $t('results') }} {{ $t(personalityType.name) }}</h2>
+        <img :src="setImg(personalityType.path)" >
         <p class="text-xl mb-4">{{ $t(personalityType.context) }}</p>
         <p class="text-lg">{{ $t('secret') }}{{ $t(personalityType.secret) }}</p>
     </div>
