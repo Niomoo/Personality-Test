@@ -10,7 +10,7 @@ import { createI18n } from 'vue-i18n'
 import zhLocale from './locales/zh.json'
 import enLocale from './locales/en.json'
 import jaLocale from './locales/ja.json'
-import kaLocale from './locales/ka.json'
+import koLocale from './locales/ko.json'
 
 const i18n = createI18n({
   locale: 'en',
@@ -18,7 +18,7 @@ const i18n = createI18n({
     zh: zhLocale,
     en: enLocale,
     ja: jaLocale,
-    ka: kaLocale
+    ko: koLocale
   }
 })
 

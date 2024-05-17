@@ -1,5 +1,13 @@
 <template>
   <div class="flex flex-col items-center justify-center h-svh bg-gray-100">
+    <div class="flex justify-between items-center p-4">
+      <select v-model="selectedLanguage" @change="changeLanguage" class="border border-gray-300 rounded-md px-3 py-2">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+    </div>
     <div class="w-full max-w-md min-w-md p-6 m-4 space-y-8 bg-white shadow-md rounded-lg">
       <h1 class="text-3xl font-bold text-center mb-12">測測你是哪種食物？</h1>
         <div v-if="!allQuestionsAnswered">
@@ -33,12 +41,12 @@ export default {
           content: 'question1',
           options: [
             {
-              text: 'question_1_0',
+              text: 'options_1_0',
               category: 3,
               type: 1       
             },
             {
-              text: 'question_1_1',
+              text: 'options_1_1',
               category: 3,
               type: -1      
             }
@@ -48,12 +56,12 @@ export default {
           content: 'question2',
           options: [
             {
-              text: 'question_2_0',
+              text: 'options_2_0',
               category: 2,
               type: 1       
             },
             {
-              text: 'question_2_1',
+              text: 'options_2_1',
               category: 2,
               type: -1      
             }
@@ -63,12 +71,12 @@ export default {
           content: 'question3',
           options: [
             {
-              text: 'question_3_0',
+              text: 'options_3_0',
               category: 3,
               type: 1       
             },
             {
-              text: 'question_3_1',
+              text: 'options_3_1',
               category: 3,
               type: -1      
             }
@@ -78,12 +86,12 @@ export default {
           content: 'question4',
           options: [
             {
-              text: 'question_4_0',
+              text: 'options_4_0',
               category: 0,
               type: 1       
             },
             {
-              text: 'question_4_1',
+              text: 'options_4_1',
               category: 0,
               type: -1      
             }
@@ -93,12 +101,12 @@ export default {
           content: 'question5',
           options: [
             {
-              text: 'question_5_0',
+              text: 'options_5_0',
               category: 1,
               type: 1       
             },
             {
-              text: 'question_5_1',
+              text: 'options_5_1',
               category: 1,
               type: -1      
             }
@@ -108,12 +116,12 @@ export default {
           content: 'question6',
           options: [
             {
-              text: 'question_6_0',
+              text: 'options_6_0',
               category: 2,
               type: 1       
             },
             {
-              text: 'question_6_1',
+              text: 'options_6_1',
               category: 2,
               type: -1      
             }
@@ -123,12 +131,12 @@ export default {
           content: 'question7',
           options: [
             {
-              text: 'question_7_0',
+              text: 'options_7_0',
               category: 0,
               type: 1       
             },
             {
-              text: 'question_7_1',
+              text: 'options_7_1',
               category: 0,
               type: -1      
             }
@@ -138,12 +146,12 @@ export default {
           content: 'question8',
           options: [
             {
-              text: 'question_8_0',
+              text: 'options_8_0',
               category: 1,
               type: -1       
             },
             {
-              text: 'question_8_1',
+              text: 'options_8_1',
               category: 1,
               type: 1      
             }
@@ -153,12 +161,12 @@ export default {
           content: 'question9',
           options: [
             {
-              text: 'question_9_0',
+              text: 'options_9_0',
               category: 2,
               type: -1       
             },
             {
-              text: 'question_9_1',
+              text: 'options_9_1',
               category: 2,
               type: 1      
             }
@@ -168,12 +176,12 @@ export default {
           content: 'question10',
           options: [
             {
-              text: 'question_10_0',
+              text: 'options_10_0',
               category: 3,
               type: 1       
             },
             {
-              text: 'question_10_1',
+              text: 'options_10_1',
               category: 3,
               type: -1      
             }
@@ -183,12 +191,12 @@ export default {
           content: 'question11',
           options: [
             {
-              text: 'question_11_0',
+              text: 'options_11_0',
               category: 1,
               type: -1       
             },
             {
-              text: 'question_11_1',
+              text: 'options_11_1',
               category: 1,
               type: 1      
             }
@@ -198,12 +206,12 @@ export default {
           content: 'question12',
           options: [
             {
-              text: 'question_12_0',
+              text: 'options_12_0',
               category: 0,
               type: -1       
             },
             {
-              text: 'question_12_1',
+              text: 'options_12_1',
               category: 0,
               type: 1      
             }
@@ -299,6 +307,12 @@ export default {
         }
       },
       currentQuestionIndex: 0,
+      selectedLanguage: this.$i18n.locale
+    }
+  },
+  watch: {
+    selectedLanguage(newVal) {
+      this.changeLanguage(newVal);
     }
   },
   computed: {
@@ -343,6 +357,10 @@ export default {
         this.userAnswers[i] = 0
       }
       this.currentQuestionIndex = 0
+    },
+    changeLanguage(locale) {
+      this.$i18n.locale = locale
+      this.selectedLanguage = locale
     }
   }
 };
