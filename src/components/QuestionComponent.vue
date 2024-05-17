@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center mt-8">
-        <h2 class="text-xl mb-8">{{ $t(question.content) }}</h2>
+        <h2 class="text-lg mb-8">{{ $t(question.content) }}</h2>
         <div class="flex flex-col justify-center gap-4">
             <button 
                 v-for="option in question.options" 

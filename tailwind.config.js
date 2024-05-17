@@ -73,6 +73,9 @@ export default {
           950: "#201604"
         }
       },
+      fontFamily: {
+        "cubic": ["Cubic-11"]
+      }
     },
   },
   plugins: [],

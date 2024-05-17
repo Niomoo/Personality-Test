@@ -1,9 +1,9 @@
 <template>
   <div class="container flex flex-col items-center justify-center p-8">
-    <div class="w-full p-6 m-4 bg-white shadow-md rounded-lg">
-      <h1 class="text-3xl font-bold text-center">{{ $t('title') }}</h1>
+    <div class="w-full p-6 m-4 bg-white shadow-md rounded-lg overflow-y-auto font-cubic">
+      <h1 class="text-2xl font-bold text-center">{{ $t('title') }}</h1>
       <div v-if="showIntro" class="flex flex-col items-center">
-        <div class="flex justify-between items-center p-4">
+        <div class="flex justify-between items-center p-2">
           <select v-model="selectedLanguage" class="border text-gray-500 border-gray-300 rounded-md px-3 py-2">
             <option value="en">English</option>
             <option value="zh">中文</option>
@@ -404,11 +404,10 @@ export default {
 
 <style scoped>
 .container {
-  background-image: url('../assets/images/bg.jpg');
+  background-image: url('/personality-test/images/bg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.9;
-  height: 100dvh; /* 設定高度為視窗高度 */
-  width: 600px;
+  height: 100%;
 }
 </style>
