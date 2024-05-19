@@ -1,6 +1,6 @@
 <script setup>
 function setImg(path) {
-    return new URL('/personality-test/images' + path, import.meta.url).href
+    return new URL('/images' + path, import.meta.url).href
 }
 </script>
 <template>

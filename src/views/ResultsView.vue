@@ -1,6 +1,6 @@
 <script setup>
 function setImg(path) {
-    return new URL('/personality-test/images' + path, import.meta.url).href
+    return new URL('/images' + path, import.meta.url).href
 }
 </script>
 <template id="capture">
@@ -134,7 +134,7 @@ export default {
 
 <style scoped>
 .container {
-  background-image: url('/personality-test/images/bg.jpg');
+  background-image: url('/images/bg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.9;
