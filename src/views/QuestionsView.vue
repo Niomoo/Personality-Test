@@ -1,7 +1,7 @@
 <template>
   <div class="container flex flex-col items-center justify-center p-8" id="capture">
     <div class="w-full p-6 m-4 bg-white shadow-md rounded-lg overflow-y-auto font-cubic">
-      <h1 class="text-2xl font-bold text-center">{{ $t('title') }}</h1>
+      <h1 class="text-2xl font-bold text-center" :class="{'text-xl': selectedLanguage == 'ja'}">{{ $t('title') }}</h1>
       <div v-if="showIntro" class="flex flex-col items-center">
         <div class="flex justify-between items-center p-2">
           <select v-model="selectedLanguage" class="border text-gray-500 border-gray-300 rounded-md px-3 py-2">
