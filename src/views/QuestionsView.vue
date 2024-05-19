@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col items-center justify-center p-8">
+  <div class="container flex flex-col items-center justify-center p-8" id="capture">
     <div class="w-full p-6 m-4 bg-white shadow-md rounded-lg overflow-y-auto font-cubic">
       <h1 class="text-2xl font-bold text-center">{{ $t('title') }}</h1>
       <div v-if="showIntro" class="flex flex-col items-center">
@@ -26,8 +26,10 @@
         </div>
         <result-component
           v-else
-          :personalityType="calculatePersonalityType"
+          :personalityType="getPersonalityObject()"
           @retake="resetTest"
+          @share="shareResult"
+          @jump="openWebsite"
         />
       </div>  
     </div>
@@ -38,6 +40,7 @@
 import IntroductionComponent from "@/components/IntroductionComponent.vue";
 import QuestionComponent from '@/components/QuestionComponent.vue';
 import ResultComponent from '@/components/ResultComponent.vue';
+import html2canvas from 'html2canvas';
 
 export default {
   components: { 
@@ -155,6 +158,7 @@ export default {
       currentQuestionIndex: 0,
       selectedLanguage: this.$i18n.locale,
       showIntro: true,
+      userPersonality: ""
     }
   },
   watch: {
@@ -191,7 +195,7 @@ export default {
       } else {
         type += 'J'
       }
-      return this.personalityType[type]
+      return type
     },
   },
   methods: {
@@ -397,6 +401,41 @@ export default {
           ]
         },
       ]
+    },    
+    getPersonalityObject() {
+      let type = this.calculatePersonalityType
+      return this.personalityType[type]
+    },
+    async shareResult() {
+      if(!navigator.share) return;
+      const canvas = await html2canvas(document.getElementById("capture"), {
+        windowWidth: window.width,
+        windowHeight: window.height,
+      })
+      canvas.toBlob(async (blob) => {
+        const fileArray = [
+          new File([blob], 'share.png', { type: blob.type })
+        ]
+        const shareData = {
+          title: '探索你的命定美食',
+          text: '原來我是' + this.calculatePersonalityType + '一起測測你的命定美食吧！',
+          files: fileArray,
+        }
+        if(navigator.canShare(shareData)) {
+          try {
+            await navigator.share(shareData);
+          } catch(err) {
+            if(err.name !== 'AbortError') {
+              console.error(err.name, err.message);
+            }
+          }
+        } else {
+          console.warn('Sharing not supported', shareData)
+        }
+      })
+    },
+    openWebsite() {
+      window.open('https://master.d3ehqflwbbjvg1.amplifyapp.com', '_blank')
     }
   }
 };

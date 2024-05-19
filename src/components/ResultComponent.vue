@@ -10,12 +10,22 @@ function setImg(path) {
         <p class="text-lg mb-4">{{ $t(personalityType.context) }}</p>
         <p class="text-md">{{ $t('secret') }}{{ $t(personalityType.secret) }}</p>
     </div>
-    <div class="flex justify-center gap-4">
+    <div class="grid grid-cols-2 justify-center gap-4">
         <button 
-            class="bg-blue-500 hover:bg-blue-600 text-lg text-white py-2 px-4 rounded"
-            @click="$emit('retake')">{{ $t('restart') }}
+            class="bg-primary-500 hover:bg-primary-600 text-lg text-white py-2 px-4 rounded"
+            @click="$emit('retake')"
+        >{{ $t('restart') }}
         </button>
-        <button class="bg-amber-500 hover:bg-amber-600 text-lg text-white py-2 px-4 rounded">{{ $t('share') }}</button>
+        <button 
+            class="bg-secondary-500 hover:bg-secondary-600 text-lg text-white py-2 px-4 rounded"
+            @click="$emit('share')"
+        >{{ $t('share') }}
+        </button>
+        <button
+            class="col-span-2 bg-accent-500 hover:bg-accent-600 text-lg text-white py-2 px-4 rounded"
+            @click="$emit('jump')"
+        >{{ $t('jump') }}
+        </button>
     </div>
 </template>
 
@@ -27,6 +37,6 @@ export default {
             required: true,
         }
     },
-    emits: ['retake']
+    emits: ['retake', 'share', 'jump']
 }
 </script>

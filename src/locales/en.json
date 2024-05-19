@@ -1,6 +1,7 @@
 {
   "title": "Discover Your Destined Cuisine",
   "introduction": "As a renowned food bounty hunter, your life's ambition has been to savor the most delectable dishes the world has to offer. One day, you receive a mysterious invitation from the renowned Wang Steakhouse Group. Legends speak of an ancient tome hidden deep within those verdant woods, detailing the perfect foods that resonate with every personality. Retrieving this prized manuscript would unveil the culinary delights that best capture your essence. With anticipation, you venture into the enigmatic wilderness, embarking on a quest to discover the flavors that define you.",
+  "start": "Let's Go!!!",
   "question1": "To locate the hidden book, you must traverse a dense forest. In this situation, you would:",
   "options_1_0": "Follow the marked official trail on the map, adhering to the set path.",
   "options_1_1": "Venture off the official route, boldly forging your own unknown shortcut.",
@@ -88,5 +89,6 @@
   "results": "Your Destined Cuisine Is ",
   "secret": "A Well-Kept Secret: ",
   "restart": "Restart",
-  "share": "Share"
+  "share": "Share",
+  "jump": "Enter the Culinary Journey"
 }
